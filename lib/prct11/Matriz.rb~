@@ -31,7 +31,7 @@ class Matriz
 		                temp = Array.new(dimensiones[0][0])
 		                val1 = @matriz[i][0]
 		                val2 = m2.[](0,j)
-		                #temp[0] = @matriz[i][0] * m2[0][j];
+		                
 		                temp[0] = val1 * val2;
 		                for k in 1...@columnas
 		                        val1 = @matriz[i][k]
