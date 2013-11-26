@@ -4,4 +4,13 @@ require "prct11/fraccion.rb"
 describe Matriz do
  before :each do
     
+	@matriz2 = Matriz.new([[1,2],[3,4]])
+	@matriz3 = Matriz.new([[5, 6],[7,8]])
+
   end 
+	describe "Operaciones basicas con matrices" do
+    		it "Se deben sumar correctamente Matrices" do
+        		(@matriz2 + @matriz3).should == Matriz.new([[6,8],[10,12]])
+    		end
+	end
+end
