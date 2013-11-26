@@ -32,7 +32,27 @@ class Matriz
 		return Matriz.new(result)
 	end
        
-	
+	def == (other)
+		result = true
+		for i in 0...@filas
+		        for j in 0...@columnas
+		                if (self.[](i,j) == other.[](i,j)) && result==true
+					result=true
+				else
+					result=false
+				end
+		        end
+		end
+		result
+	end 
+
+	def []=(i,j,x)
+	   @matriz[i][j] = x
+	end
+
+	def [](i,j)
+	  @matriz[i][j]
+	end	
 end
 
 class Mdensa < Matriz
