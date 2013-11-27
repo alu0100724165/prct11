@@ -32,10 +32,10 @@ describe Matriz do
 
 	describe "Maximos y minimos" do
 		it "Maximos" do
-			@matriz1.should == 4
+			@matriz1.max.should == 4
 		end
 		it "Minimos" do
-			@matriz1.should == 1
+			@matriz1.min.should == 1
 		end
 	end
 end

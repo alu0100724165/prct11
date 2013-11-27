@@ -79,33 +79,28 @@ class Matriz
 	end
 
 	def max
-                maximo = 0 
-                i, j = 0,0
-                while i<=@filas
-                        while j<=@columnas
-                                if (self[i,j]>maximo) 
-                                        maximo = self[i,j]
-                                end
-                                j += 1;
-                        end
-                        i += 1;
-                end
-                return maximo
-        end
+        	maximo = @matriz[0][0];
+			for i in 0...@filas
+				for j in 0...@columnas
+				        if(@matriz[i][j] > maximo)
+				                maximo = @matriz[i][j]
+				        end
+				end
+			end
+        	return maximo
+	end
+        
        
         def min
-                minimo = 0 
-                i, j = 0,0
-                while i<=@filas
-                        while j<=@columnas
-                                if (self[i,j]<minimo) 
-                                        minimo = self[i,j]
-                                end
-                                j += 1;
-                        end
-                        i += 1;
-                end
-                return minimo
+                  minimo = @matriz[0][0];
+		for i in 0...@filas
+		        for j in 0...@columnas
+		                if(@matriz[i][j] < minimo)
+		                        maximo = @matriz[i][j]
+		                end
+		        end
+		end
+		return minimo
         end	
 end
 

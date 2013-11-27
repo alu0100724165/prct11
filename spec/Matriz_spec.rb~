@@ -27,5 +27,15 @@ describe Matriz do
 		it "Multiplicar matrices " do
 			(@matriz3 * @matriz4).should == Matriz.new([[ Fraccion.new(5,12) , Fraccion.new(7,60)],[Fraccion.new(7,20), Fraccion.new(31,300)]])
 		end
+		
+	end
+
+	describe "Maximos y minimos" do
+		it "Maximos" do
+			@matriz1.should == 4
+		end
+		it "Minimos" do
+			@matriz1.should == 1
+		end
 	end
 end
