@@ -25,7 +25,7 @@ describe Matriz do
 		end
 		
 		it "Multiplicar matrices " do
-			(@matriz3 * @matriz4).should == Matriz.new([[ Fraccion.new(1,1) , Fraccion.new(2,3)],[Fraccion.new(1,1), Fraccion.new(2,5)]])
+			(@matriz3 * @matriz4).should == Matriz.new([[ Fraccion.new(5,12) , Fraccion.new(7,60)],[Fraccion.new(7,20), Fraccion.new(31,300)]])
 		end
 	end
 end
