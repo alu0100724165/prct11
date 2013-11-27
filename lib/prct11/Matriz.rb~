@@ -46,15 +46,14 @@ class Matriz
 	end
 	
 	def +(m2)
-		filas_final = @filas
-        	columnas_final = @columnas
-       	 	resultado = Array.new(filas_final){Array.new(columnas_final, 0)}
-        	for i in 0...@filas
-               	 	for j in 0...@columnas
-                        	resultado[i][j] = @matriz[i][j] +m2.matriz[i][j]
-                	end
-       		end
-        	return Matriz.new(resultado)
+		suma = Array.new(@filas){Array.new(@columnas)}
+		
+		for i in 0...@filas
+		        for j in 0...@columnas
+		                suma[i][j] = @matriz[i][j] + m2.matriz[i][j]
+		        end
+		end
+		return Matriz.new(suma)
 	end
        
 	def == (other)

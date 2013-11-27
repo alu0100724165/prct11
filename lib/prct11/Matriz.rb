@@ -76,7 +76,37 @@ class Matriz
 
 	def [](i,j)
 	  	@matriz[i][j]
-	end	
+	end
+
+	def max
+                maximo = 0 
+                i, j = 0,0
+                while i<=@filas
+                        while j<=@columnas
+                                if (self[i,j]>maximo) 
+                                        maximo = self[i,j]
+                                end
+                                j += 1;
+                        end
+                        i += 1;
+                end
+                return maximo
+        end
+       
+        def min
+                minimo = 0 
+                i, j = 0,0
+                while i<=@filas
+                        while j<=@columnas
+                                if (self[i,j]<minimo) 
+                                        minimo = self[i,j]
+                                end
+                                j += 1;
+                        end
+                        i += 1;
+                end
+                return minimo
+        end	
 end
 
 class Mdensa < Matriz
